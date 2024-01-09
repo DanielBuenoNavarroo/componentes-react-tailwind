@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+* {
+  @apply box-border m-0 p-0;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  @apply flex justify-center items-center min-h-screen;
+  background: #25252b;
+}
+
+.login {
+  @apply absolute flex justify-center items-center flex-col z-10 shadow-[inset_0_10px_20px_rgba(0,0,0,0.5)] transition-[0.5s] text-[white] overflow-hidden rounded-[10px] border-b-2 border-b-[rgba(255,255,255,0.5)] border-solid inset-[60px];
+  background: rgba(0, 0, 0, 0.2);
+}
+.box:hover .login {
+  @apply inset-10;
+}
+.loginBx {
+  @apply relative flex justify-center items-center flex-col gap-5 w-[70%] translate-y-[126px] transition-[0.5s];
+}
+.box:hover .loginBx {
+  @apply translate-y-0;
+}
+.loginBx h2 {
+  @apply uppercase font-semibold tracking-[0.2em];
+}
+.loginBx h2 i {
+  @apply text-[#ff2770];
+  text-shadow: 0 0 5px #ff2770, 0 0 25px #ff2770;
+}
+.loginBx input {
+  @apply w-full text-[1em] text-[white] px-5 py-2.5 rounded-[30px] border-[none] border-2 border-solid border-[white];
+  outline: none;
+  background: rgba(0, 0, 0, 0.1);
+}
+.loginBx input::placeholder {
+  @apply text-[#999];
+}
+.loginBx input[type="submit"] {
+  @apply font-medium text-[#111] cursor-pointer transition-[0.5s] border-[none] hover:shadow-[0_0_10px_#45f3ff];
+  background: #45f3ff;
+}
+.group {
+  @apply w-full flex justify-between;
+}
+.group a {
+  @apply text-white no-underline;
+}
+.group a:nth-child(2) {
+  @apply text-[#ff2770] font-semibold;
+}

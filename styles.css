@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+.AppContainer {
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  overflow-y: auto;
+  scrollbar-width: none;
+  color: white;
+  background: url("./img/bg.jpeg");
+}
+.AppContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.FormContainer, .NetflixLogoContainer {
+  scroll-snap-type: center;
+}
+
+.box {
+  filter: drop-shadow(0 15px 50px #000);
+  transition: 0.5s;
+}
+.box::after {
+  content: "";
+  background: #2d2d39;
+}
+
+.login{
+    transition: 0.5s;
+    inset: 40px;
+}
