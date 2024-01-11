@@ -8,25 +8,28 @@
   margin: 0;
   padding: 0;
 }
+
 .AppContainer {
   height: 100vh;
   scroll-snap-type: y mandatory;
+  -webkit-scroll-behavior: smooth;
   scroll-behavior: smooth;
   overflow-y: auto;
   scrollbar-width: none;
   color: white;
   background: url("./img/bg.jpeg");
 }
+
 .AppContainer::-webkit-scrollbar {
   display: none;
 }
 
-.FormContainer, .NetflixLogoContainer {
+.FormContainer, .NetflixLogoContainer, .YoutubeLogoContainer {
   scroll-snap-type: center;
 }
 
 .box {
-  filter: drop-shadow(0 15px 50px #000);
+  /*filter: drop-shadow(0 15px 50px #000);*/
   transition: 0.5s;
 }
 .box::after {
